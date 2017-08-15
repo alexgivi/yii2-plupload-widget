@@ -12,7 +12,7 @@ Plupload = {
         var params = {};
         params[yii.getCsrfParam()] = yii.getCsrfToken();
 
-        elem.pluploadQueue({
+        var uploader = elem.pluploadQueue({
             // General settings
             runtimes: 'html5,gears,flash,silverlight',
 
@@ -58,7 +58,7 @@ Plupload = {
             silverlight_xap_url: elem.data('moxie-xap')
         });
 
-        elem.on('complete', function () {
+        uploader.pluploadQueue().bind('UploadComplete', function () {
             form.submit();
         });
     }
