@@ -60,6 +60,11 @@ class Plupload extends Widget
         $this->view->registerJsFile(Yii::$app->assetManager->getPublishedUrl(
             $this->_getLanguageFilePath()));
 
+        $pluploadJs = dirname(__FILE__) . '/plupload.js';
+        Yii::$app->assetManager->publish($pluploadJs);
+        $this->view->registerJsFile(Yii::$app->assetManager->getPublishedUrl($pluploadJs));
+        $this->view->registerJs('Plupload.init();');
+
         return $content;
     }
 
