@@ -1,6 +1,7 @@
 yii2-plupload
 =============
 Plupload Widget for Yii2
+uses [moxiecode/plupload](https://github.com/moxiecode/plupload)
 
 Installation
 ------------
