@@ -1,0 +1,22 @@
+{
+  "name": "alexgivi/yii2-plupload-widget",
+  "description": "Plupload Widget for Yii2, using Moxiecode plupload",
+  "type": "yii2-extension",
+  "keywords": ["yii2","extension","plupload"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexey Gevondyan",
+      "email": "alexgivi@nextmail.ru"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*",
+    "moxiecode/plupload": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "alexgivi\\plupload\\": ""
+    }
+  }
+}
