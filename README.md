@@ -37,7 +37,7 @@ Once the extension is installed, simply use it in your code by  :
 In the controller:
 
 ```php
-class Controller
+class Controller extends yii\web\Controller
 {
 	public function actionTestUpload()
 	{
