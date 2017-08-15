@@ -29,5 +29,20 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \alexgivi\plupload\Plupload::widget(); ?>
+<?= \alexgivi\plupload\Plupload::widget([
+    'url' => ['controller/test-upload'],
+]); ?>
+```
+
+In the controller:
+
+```php
+class Controller
+{
+	public function actionTestUpload()
+	{
+		$file = UploadedFile::getInstanceByName('file');
+		// perform file save.
+	}
+}
 ```
