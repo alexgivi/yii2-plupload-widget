@@ -37,6 +37,7 @@ class Plupload extends Widget
     public function run()
     {
         $this->_setLanguage();
+        PluploadAsset::register($this->view);
         Yii::$app->assetManager->publish($this->_getLanguageFilePath());
 
         $swfPath = $this->_pluploadBasePath() . '/Moxie.swf';
@@ -56,7 +57,6 @@ class Plupload extends Widget
         $content .= Html::endTag('div');
         $content .= Html::endForm();
 
-        PluploadAsset::register($this->view);
         $this->view->registerJsFile(Yii::$app->assetManager->getPublishedUrl(
             $this->_getLanguageFilePath()), [
             'depends' => PluploadAsset::className(),
