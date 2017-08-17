@@ -30,14 +30,6 @@ Plupload = {
             max_file_count: 20,
             chunk_size: '1mb',
 
-            // Resize images on clientside if we can
-            resize : {
-                width: 200,
-                height: 200,
-                quality: 90,
-                crop: true // crop to exact dimensions
-            },
-
             // Rename files by clicking on their titles
             rename: true,
 
